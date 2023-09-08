@@ -1,0 +1,6 @@
+- Criar um react functional component using rfce
+
+* Estilizar as bordas do cards
+
+- fw-bold: deixa negrito o texto
+- nesse link é consumido uma api de fotos aleatorias [https://source.unsplash.com/random/400*400/?city,night]

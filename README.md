@@ -1,3 +1,20 @@
+# {JSON} Placeholder
+- API [https://jsonplaceholder.typicode.com/]
+
+# Bootstrap 5
+- v5.2 [https://getbootstrap.com/docs/5.2/getting-started/introduction/]
+
+# Google Fonts
+- Ubuntu [https://fonts.google.com/specimen/Ubuntu?query=Ubuntu]
+
+# Font Awesome
+- CDN [https://cdnjs.com/libraries/font-awesome]
+
+# Tecnologias
+
+- React Router Dom [https://www.npmjs.com/package/react-router-dom]
+- React-Helmet [https://www.npmjs.com/package/react-helmet]
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
