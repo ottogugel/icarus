@@ -16,6 +16,20 @@ function SignUp() {
   const [password, setPassword] = useState("");
 
   // const [loader, setLoader] = useState(false);
+ function alertFunction(message, type) {
+   var wrapper = document.createElement("div");
+   wrapper.innerHTML =
+     '<div class="alert alert-' +
+     type +
+     ' alert-dismissible" role="alert">' +
+     message +
+     '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+
+   var alertPlaceholder = document.getElementById("alertMsg");
+   alertPlaceholder.append(wrapper);
+ }
+
+
 
   const signup = (event) => {
     event.preventDefault();
@@ -37,7 +51,7 @@ function SignUp() {
     axios
       .post(`${API_BASE_URL}/users`, reqData, config)
       .then((response) => {
-        console.log(response);
+        alertFunction('Post edit sucessfuly', 'success')
         setEmail("")
         setFname("");
         setLname("")
