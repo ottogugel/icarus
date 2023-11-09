@@ -93,10 +93,10 @@ function NavBar() {
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
             <NavLink to={"/login"} className="btn btn-dark bg-gradient mx-1">
-              <i class="fa-solid fa-right-to-bracket"></i>
+              <i className="fa-solid fa-right-to-bracket"></i>
             </NavLink>
             <NavLink to={"/signup"} className="btn btn-dark bg-gradient">
-              <i class="fa-sharp fa-solid fa-user-plus"></i>
+              <i className="fa-sharp fa-solid fa-user-plus"></i>
             </NavLink>
           </form>
         </div>
