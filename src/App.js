@@ -12,6 +12,8 @@ import PostDetail from "./screens/PostDetail/PostDetail";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CreatePost from './screens/CreatePost';
+import SignUp from './screens/SignUp/SignUp';
+import Login from './screens/Login/Login';
 
 
 
@@ -23,6 +25,8 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/signup" element={<SignUp />} />
+          <Route exact path="/login" element={<Login />} />
           <Route exact path="/notice" element={<Notice />} />
           <Route exact path="/event" element={<Event />} />
           <Route exact path="/posts" element={<AllPosts />} />

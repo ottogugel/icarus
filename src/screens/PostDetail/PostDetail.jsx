@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { API_BASE_URL } from "../../config/constant";
 import './PostDetail.css'
 
 function PostDetail() {
+
+  const navigate = useNavigate();
+
   const [title, setTitle] = useState();
   const [body, setBody] = useState();
 
@@ -93,6 +96,11 @@ function PostDetail() {
               </li>
               <li className="list-group-item">
                 <a href={`www.${website}`}>Visit our website</a>
+              </li>
+              <li className="list-group-item">
+                <div className="d-block">
+                    <button onClick={() => { navigate(-1) }} className="btn btn-primary w-100 text-uppercase">Back</button>
+                </div>
               </li>
             </ul>
           </div>

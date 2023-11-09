@@ -84,14 +84,20 @@ function NavBar() {
           </ul>
           <form className="d-flex" role="search">
             <input
-              className="form-control me-2"
+              className="form-control me-1"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button className="btn btn-dark bg-gradient" type="submit">
+            <button className="btn btn-dark bg-gradient mx-1" type="submit">
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
+            <NavLink to={"/login"} className="btn btn-dark bg-gradient mx-1">
+              <i class="fa-solid fa-right-to-bracket"></i>
+            </NavLink>
+            <NavLink to={"/signup"} className="btn btn-dark bg-gradient">
+              <i class="fa-sharp fa-solid fa-user-plus"></i>
+            </NavLink>
           </form>
         </div>
       </div>

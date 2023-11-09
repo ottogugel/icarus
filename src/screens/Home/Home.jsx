@@ -181,22 +181,22 @@ function Home() {
           </div>
         </div>
       </section>
-      {/* */}
+      {/*
       <section
         className="container-fluid bg-dark bg-gradient mt-4"
         style={{ minHeight: "180px" }}
       >
         <div className="d-flex flex-column justify-content-center align-items-center">
           <i className="fs-1 text-warning my-3 fa-solid fa-location-dot"></i>
-          <h3 className="text-white">
-            We have wide variety of Posts
-          </h3>
+          <h3 className="text-white">We have wide variety of Posts</h3>
           <button className="fw-bold btn btn-warning bg-gradient my-2">
             View All Posts
           </button>
         </div>
       </section>
+      */}
       {/* Our Portfolios */}
+      {/*
       <section className="our-portfolios container">
         <h3 className="text-center text-uppercase py-4">Our Portfolios</h3>
         <div className="container text-center">
@@ -240,6 +240,7 @@ function Home() {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 }
