@@ -145,7 +145,7 @@ function CreatePost() {
             </div>
             <div className="d-grid">
               <button type="submit" className="btn btn-warning bg-gradient">
-                Create Post
+                {isEdit? 'Edit Post': 'Create Post'}
               </button>
             </div>
           </form>

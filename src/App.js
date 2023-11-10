@@ -17,31 +17,31 @@ import Login from './screens/Login/Login';
 
 
 
-
+function DynamicRoutes() {
+  return (
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/signup" element={<SignUp />} />
+      <Route exact path="/login" element={<Login />} />
+      <Route exact path="/notice" element={<Notice />} />
+      <Route exact path="/event" element={<Event />} />
+      <Route exact path="/posts" element={<AllPosts />} />
+      <Route exact path="/posts/:postId/:userId" element={<PostDetail />} />
+      <Route exact path="/about" element={<About />} />
+      <Route exact path="/create" element={<CreatePost />} />
+      <Route exact path="/create/:postId/:userId" element={<CreatePost />} />
+      <Route exact path="/contact" element={<Contact />} />
+      <Route exact path="/work" element={<Work />} />
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
+  );
+}
 function App() {
   return (
     <Router>
       <div>
         <NavBar />
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/signup" element={<SignUp />} />
-          <Route exact path="/login" element={<Login />} />
-          <Route exact path="/notice" element={<Notice />} />
-          <Route exact path="/event" element={<Event />} />
-          <Route exact path="/posts" element={<AllPosts />} />
-          <Route exact path="/posts/:postId/:userId" element={<PostDetail />} />
-          <Route exact path="/about" element={<About />} />
-          <Route exact path="/create" element={<CreatePost />} />
-          <Route
-            exact
-            path="/create/:postId/:userId"
-            element={<CreatePost />}
-          />
-          <Route exact path="/contact" element={<Contact />} />
-          <Route exact path="/work" element={<Work />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
+        <DynamicRoutes />
         <Footer />
       </div>
     </Router>

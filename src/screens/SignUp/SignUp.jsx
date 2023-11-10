@@ -1,13 +1,9 @@
-import React from 'react'
-import Helmet from "react-helmet";
-import axios from 'axios'
+import React, { useState } from 'react'
 import { API_BASE_URL } from "../../config/constant";
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import axios from "axios";
+import Helmet from "react-helmet";
 
 function SignUp() {
-
-  //const navigate = useNavigate();
 
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -29,8 +25,6 @@ function SignUp() {
    alertPlaceholder.append(wrapper);
  }
 
-
-
   const signup = (event) => {
     event.preventDefault();
     //setLoader(true);
@@ -51,7 +45,7 @@ function SignUp() {
     axios
       .post(`${API_BASE_URL}/users`, reqData, config)
       .then((response) => {
-        alertFunction('Post edit sucessfuly', 'success')
+        alertFunction('Registration Successfully, Please Proceed to Login!', 'success')
         setEmail("")
         setFname("");
         setLname("")
@@ -59,13 +53,17 @@ function SignUp() {
         setPhone("");
 
       })
-      .catch((err) => { console.log(err); });
+      .catch((err) => {
+        alertFunction('Some error occurred', 'danger')
+        console.log(err);
+      });
   }
 
   return (
     <div className="container">
       <Helmet title="Icarus - Sign Up" />
       <h3 className="text-center text-uppercase pt-4">Create an Account</h3>
+      <div id="alertMsg"></div>
       <div className="mx-auto contact-form-container text-muted shadow-sm rounded p-3 lh-2">
         <form onSubmit={(ev) => signup(ev)}>
           <div className="mb-3">
@@ -73,12 +71,12 @@ function SignUp() {
               First name
             </label>
             <input
+              value={fname}
               onChange={(e) => setFname(e.target.value)}
               type="text"
               className="form-control"
               id="Firstname"
               placeholder="Icarus"
-              required
             />
           </div>
           <div className="mb-3">
@@ -86,12 +84,12 @@ function SignUp() {
               Last name
             </label>
             <input
+              value={lname}
               onChange={(e) => setLname(e.target.value)}
               type="text"
               className="form-control"
               id="Lastname"
               placeholder="School"
-              required
             />
           </div>
           <div className="mb-3">
@@ -99,6 +97,7 @@ function SignUp() {
               Contact no.
             </label>
             <input
+              value={phone}
               onChange={(e) => setPhone(e.target.value)}
               type="text"
               className="form-control"
@@ -111,11 +110,13 @@ function SignUp() {
               Email address
             </label>
             <input
+              value={email}
               onChange={(e) => setEmail(e.target.value)}
               type="email"
               className="form-control"
               id="email"
               placeholder="icarus@gmail.com"
+              required
             />
             <div id="emailHelp" className="form-text">
               We'll never share your email with anyone else.
@@ -126,6 +127,7 @@ function SignUp() {
               Password
             </label>
             <input
+              value={password}
               onChange={(e) => setPassword(e.target.value)}
               type="password"
               className="form-control"
