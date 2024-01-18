@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Helmet from "react-helmet";
 import axios from "axios";
 import { API_BASE_URL } from "../../config/constant";
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from "../../App";
 
 function Login() {
 
@@ -10,6 +11,8 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const { state, dispatch } = useContext(UserContext);
 
   function alertFunction(message, type) {
     var wrapper = document.createElement("div");
@@ -48,9 +51,16 @@ function Login() {
         fetch(`${API_BASE_URL}/users/${userId}`)
           .then((response) => response.json())
           .then((json) => {
+            localStorage.clear();
             localStorage.setItem('user', JSON.stringify(json));
             localStorage.setItem('token', 'sdfgxzasmwlqoei');
+            const token = localStorage.getItem("token");
+            const user = localStorage.getItem("user");
+            const userState = { token: token, user: user };
+            const action = { type: "LOGIN", payload: userState };
+            dispatch(action);
             navigate('/posts');
+
           });
       })
       .catch((err) => {

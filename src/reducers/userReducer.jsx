@@ -1,3 +1,5 @@
+// Redux é uma biblioteca para armazenamento de estados de aplicações JavaScript
+
 //Define initial value of user data/state
 export const initialUserState = null;
 

@@ -11,19 +11,32 @@ import AllPosts from "./screens/AllPosts";
 import Notice from "./screens/Notice";
 import PostDetail from "./screens/PostDetail/PostDetail";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import CreatePost from './screens/CreatePost';
 import SignUp from './screens/SignUp/SignUp';
 import Login from './screens/Login/Login';
+import { initialUserState, userReducer } from './reducers/userReducer';
 
 
 export const UserContext = createContext();
 
 function DynamicRoutes() {
 
+  const navigate = useNavigate();
   const { state, dispatch } = useContext(UserContext);
 
-  useEffect(() =>{
+  useEffect(() => {
+
+    const token = localStorage.getItem('token');
+    if(token){ // user is already logged in
+      const user = localStorage.getItem('user');
+      const userState = {'token': token, 'user': user}
+      const action = {type: 'LOGIN', payload: userState };
+      dispatch(action);
+      navigate('/posts');
+    }else{
+      navigate('/login');
+    }
 
   }, []);
 
@@ -47,14 +60,17 @@ function DynamicRoutes() {
 }
 function App() {
 
+  const [state, dispatch] = useReducer(userReducer, initialUserState);
   return (
-    <Router>
-      <div>
-        <NavBar />
-        <DynamicRoutes />
-        <Footer />
-      </div>
-    </Router>
+    <UserContext.Provider value={{state: state, dispatch: dispatch}}>
+      <Router>
+        <div>
+          <NavBar />
+          <DynamicRoutes />
+          <Footer />
+        </div>
+      </Router>
+    </UserContext.Provider>
   );
 }
 
