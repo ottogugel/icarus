@@ -86,7 +86,7 @@ function AllPosts() {
                   <div className="card text-center mb-3">
                     <img
                       src="https://source.unsplash.com/random/400*400/?city,night"
-                      className="card-img-top"
+                      className="card-img-top rounded-top"
                       alt="..."
                       style={{ height: "280px" }}
                     />

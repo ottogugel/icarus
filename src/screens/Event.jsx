@@ -16,10 +16,23 @@ function Event() {
         <i className="fa-solid fa-person-breastfeeding"></i> Mother's Day
       </p>
       <p className="text-muted shadow-sm rounded p-3 lh-2">
+        <i className="fa-solid fa-user-tie"></i> Father's Day
+      </p>
+      <p className="text-muted shadow-sm rounded p-3 lh-2">
         <i className="fa-solid fa-user-tie"></i> Teacher's Day
       </p>
+      <p className="text-muted shadow-sm rounded p-3 lh-2">
+        <i className="fa-solid fa-user-tie"></i> Test
+      </p>
+      <p className="text-muted shadow-sm rounded p-3 lh-2">
+        <i className="fa-solid fa-user-tie"></i> Test
+      </p>
+      <p className="text-muted shadow-sm rounded p-3 lh-2">
+        <i className="fa-solid fa-user-tie"></i> Test
+      </p>
       <p className="p-3 lh-2">
-        <i className="fa-solid fa-circle-exclamation"></i> These events are in progress
+        <i className="fa-solid fa-circle-exclamation"></i> These events are in
+        progress
       </p>
     </div>
   );

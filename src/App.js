@@ -1,3 +1,4 @@
+import React, {useEffect, createContext, useReducer, useContext, useState} from 'react'
 import NavBar from './components/NavBar';
 import Footer from './components/Footer'
 import Event from './screens/Event';
@@ -16,8 +17,16 @@ import SignUp from './screens/SignUp/SignUp';
 import Login from './screens/Login/Login';
 
 
+export const UserContext = createContext();
 
 function DynamicRoutes() {
+
+  const { state, dispatch } = useContext(UserContext);
+
+  useEffect(() =>{
+
+  }, []);
+
   return (
     <Routes>
       <Route exact path="/" element={<Home />} />
@@ -37,6 +46,7 @@ function DynamicRoutes() {
   );
 }
 function App() {
+
   return (
     <Router>
       <div>

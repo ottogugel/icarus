@@ -44,7 +44,7 @@ function Home() {
         <h3 className="text-center py-4">Notice</h3>
         <div className="row">
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card text-center mb-3">
+            <div className="card text-center mb-3 rounded-top">
               <img
                 src="https://images.unsplash.com/photo-1440778303588-435521a205bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8U3VtbWVyJTIwdmFjYXRpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
                 className="card-img-top"
@@ -66,7 +66,7 @@ function Home() {
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card text-center mb-3">
+            <div className="card text-center mb-3 rounded-top">
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTE0fHxTdHVkeSUyMG9mJTIwbGFuZ3VhZ2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                 className="card-img-top"
@@ -87,7 +87,7 @@ function Home() {
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card text-center mb-3">
+            <div className="card text-center mb-3 rounded-top">
               <img
                 src="https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8UGVyc29uYWwlMjBIeWdpZW5lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
                 className="card-img-top"
@@ -115,7 +115,7 @@ function Home() {
         <h3 className="text-center py-4">Event</h3>
         <div className="row">
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card text-center mb-3">
+            <div className="card text-center mb-3 rounded-top">
               <img
                 src="https://images.unsplash.com/photo-1517164850305-99a3e65bb47e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8U2Nob29sJTIwR2FtZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
                 className="card-img-top"
@@ -136,7 +136,7 @@ function Home() {
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card text-center mb-3">
+            <div className="card text-center mb-3 rounded-top">
               <img
                 src="https://images.unsplash.com/photo-1646816185462-b9970adda183?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bW90aGVyJ3MlMjBkYXklMjBzY2hvb2x8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60"
                 className="card-img-top"
@@ -158,7 +158,7 @@ function Home() {
             </div>
           </div>
           <div className="col-lg-4 col-md-4 col-sm-12">
-            <div className="card text-center mb-3">
+            <div className="card text-center mb-3 rounded-top">
               <img
                 src="https://plus.unsplash.com/premium_photo-1666299764057-b0ca4ca13e15?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fFRlYWNoZXIncyUyMERheXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60"
                 className="card-img-top"

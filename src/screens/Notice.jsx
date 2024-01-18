@@ -10,9 +10,15 @@ function Notice() {
       <p className="text-muted shadow-sm rounded p-3 lh-2">
         Study of languages
       </p>
+      <p className="text-muted shadow-sm rounded p-3 lh-2">Personal Hygiene</p>
+      <p className="text-muted shadow-sm rounded p-3 lh-2">Annual Holidays</p>
+      <p className="text-muted shadow-sm rounded p-3 lh-2">School breaks</p>
       <p className="text-muted shadow-sm rounded p-3 lh-2">
-        Personal Hygiene
+        Promotions on registration and tuition
       </p>
+      <p className="text-muted shadow-sm rounded p-3 lh-2">Test</p>
+      <p className="text-muted shadow-sm rounded p-3 lh-2">Test</p>
+      <p className="text-muted shadow-sm rounded p-3 lh-2">Test</p>
     </div>
   );
 }
