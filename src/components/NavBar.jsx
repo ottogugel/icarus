@@ -124,7 +124,7 @@ function NavBar() {
                   className="btn btn-danger bg-gradient mx-1"
                   type="submit"
                 >
-                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <i className="fa-solid fa-right-from-bracket"></i>
                 </button>
               ) : (
                 <>

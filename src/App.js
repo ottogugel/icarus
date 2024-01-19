@@ -16,6 +16,7 @@ import CreatePost from './screens/CreatePost';
 import SignUp from './screens/SignUp/SignUp';
 import Login from './screens/Login/Login';
 import { initialUserState, userReducer } from './reducers/userReducer';
+import MyAllPosts from './screens/MyAllPosts';
 
 
 export const UserContext = createContext();
@@ -29,7 +30,7 @@ function DynamicRoutes() {
 
     const token = localStorage.getItem('token');
     if(token){ // user is already logged in
-      const user = localStorage.getItem('user');
+      const user = JSON.parse(localStorage.getItem('user'));
       const userState = {'token': token, 'user': user}
       const action = {type: 'LOGIN', payload: userState };
       dispatch(action);
@@ -48,10 +49,11 @@ function DynamicRoutes() {
       <Route exact path="/notice" element={<Notice />} />
       <Route exact path="/event" element={<Event />} />
       <Route exact path="/posts" element={<AllPosts />} />
-      <Route exact path="/posts/:postId/:userId" element={<PostDetail />} />
+      <Route exact path="/myposts" element={<MyAllPosts />} />
       <Route exact path="/about" element={<About />} />
       <Route exact path="/create" element={<CreatePost />} />
       <Route exact path="/create/:postId/:userId" element={<CreatePost />} />
+      <Route exact path="/posts/:postId/:userId" element={<PostDetail />} />
       <Route exact path="/contact" element={<Contact />} />
       <Route exact path="/work" element={<Work />} />
       <Route path="*" element={<PageNotFound />} />

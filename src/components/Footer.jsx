@@ -44,8 +44,7 @@ function Footer() {
           <h5>Contact Address</h5>
           <div className="d-flex flex-column">
             <p>
-              {" "}
-              <i className="px-1 fa-solid fa-location-arrow"></i> 26 Huston Street
+              26 Huston Street
             </p>
             <p>Newton City</p>
             <p>Random State - 756767</p>

@@ -1,49 +1,14 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Helmet from "react-helmet";
 import { API_BASE_URL } from "../config/constant";
-import axios from "axios";
 
 function AllPosts() {
 
-  const navigate = useNavigate();
   // Create a variable to store all posts and a set method to update the value of posts
   // useState hook helps us create this variable with empty array
   const [posts, setPosts] = useState([]);
   const [loader, setLoader] = useState(false);
-
-  function alertFunction(message, type) {
-    var wrapper = document.createElement("div");
-    wrapper.innerHTML =
-      '<div class="alert alert-' +
-      type +
-      ' alert-dismissible" role="alert">' +
-      message +
-      '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
-
-    var alertPlaceholder = document.getElementById("alertMsg");
-    alertPlaceholder.append(wrapper);
-  }
-
-  const deletePost = (postId) => {
-    //console.log(postId);
-
-    let action = window.confirm("Are you sure to proceed?");
-
-    if(action) {
-      axios
-        .delete(`${API_BASE_URL}/posts/${postId}`)
-        .then((resp) => {
-          console.log(resp);
-          alertFunction(`Post with Id ${postId} has been deleted`, "success");
-          navigate('/posts')
-        })
-        .catch((err) => {
-          console.log(err);
-          alertFunction(`Error occurred while deleting the Post`, "danger");
-        });
-    }
-  };
 
   // function getAllPosts() {}
   //ES6 function to get all posts from REST API
@@ -93,27 +58,13 @@ function AllPosts() {
                     <div className="card-body">
                       <h5 className="card-title">{post.title}</h5>
                       <p className="card-text">{post.body}</p>
-                      <div className="d-flex justify-content-between">
+                      <div className="d-grid">
                         <Link
                           to={`/posts/${post.id}/${post.userId}`}
                           className="btn btn-primary bg-gradient"
                         >
-                          <i className="fa-solid fa-circle-info"></i> Details
+                          <i class="fa-solid fa-location-arrow"></i> Details
                         </Link>
-                        <Link
-                          to={`/create/${post.id}/${post.userId}`}
-                          className="btn btn-dark bg-gradient"
-                        >
-                          <i className="fa-solid fa-pen-to-square"></i> Edit
-                        </Link>
-                        <button
-                          onClick={() => {
-                            deletePost(post.id);
-                          }}
-                          className="btn btn-danger bg-gradient"
-                        >
-                          <i className="fa-solid fa-trash"></i> Delete
-                        </button>
                       </div>
                     </div>
                   </div>

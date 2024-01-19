@@ -54,10 +54,10 @@ function Login() {
             localStorage.clear();
             localStorage.setItem('user', JSON.stringify(json));
             localStorage.setItem('token', 'sdfgxzasmwlqoei');
-            const token = localStorage.getItem("token");
-            const user = localStorage.getItem("user");
+            const token = localStorage.getItem('token');
+            const user = JSON.parse(localStorage.getItem('user'));
             const userState = { token: token, user: user };
-            const action = { type: "LOGIN", payload: userState };
+            const action = { type: 'LOGIN', payload: userState };
             dispatch(action);
             navigate('/posts');
 
