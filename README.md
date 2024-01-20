@@ -1,6 +1,6 @@
 ## 💭 O que é e qual a ideia do projeto?
 
-Esse é um projeto feito em um curso de reactjs junto à bootstrap5, redux e rest api da Obify [https://www.udemy.com/user/pvt-obify-consulting-services-ltd/] pela plataforma da [Udemy](https://www.udemy.com/course/modern-web-development-with-react-bootstrap-redux-rest-api/), o projeto consiste em um site utilizando uma api para consumir informações para postagens, onde pode ser criadas, editadas e excluidas e também a criações de usuários.
+Esse é um projeto feito em um curso de reactjs junto à bootstrap5, redux e rest api da [Obify](https://www.udemy.com/user/pvt-obify-consulting-services-ltd/) pela plataforma da [Udemy](https://www.udemy.com/course/modern-web-development-with-react-bootstrap-redux-rest-api/), o projeto consiste em um site utilizando uma api para consumir informações para postagens, onde pode ser criadas, editadas e excluidas e também a criações de usuários.
 
 <br>
 
